@@ -28,7 +28,7 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('devBuild-js', () => {
-	return gulp.src(['./js/vendor/*.js', './js/helpers.js', './js/commonComponents.js', './js/Main.js'])
+	return gulp.src(['./js/vendor/preact.min.js', './js/Main.js'])
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(babel({ presets: ['babel-preset-es2015'].map(require.resolve) }))
